@@ -49,7 +49,7 @@ class ConvertAddressToGeocodes {
     }
 
     async getGeocodesForAddress(newAddress: string) {
-        if (!newAddress) return // return error 
+        if (newAddress === '') return Promise.reject(new Error('must provide an address'))
         const newParams = this.getParams(newAddress)
         const url = this._endpoint + '/' + this._outputFormat + '?' + newParams
         const res = await axios ({
@@ -61,7 +61,7 @@ class ConvertAddressToGeocodes {
         })
         if (res.status !== 200) return Promise.reject(res)
         return Promise.resolve({
-            data: this.formatResultData(res.data.result),
+            data: this.formatResultData(res.data.results),
             status: res.status,
             statusText: res.statusText
         })

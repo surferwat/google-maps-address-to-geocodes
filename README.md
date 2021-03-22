@@ -31,7 +31,7 @@ npm install /file/path/to/module
 ## Usage
 
 ```javascript
-import { ConvertAddressToGeocodes } from 'package'
+import { ConvertAddressToGeocodes } from 'google-maps-address-to-geocodes'
 
 
 const address = 'correctly formatted address'
@@ -47,7 +47,7 @@ await convertAddressToGeocodes
 
 ## Todo 
 
-* [ ] Add error handling
+* [x] Add error handling
 * [ ] Add tests
 * [ ] Add optional parameters for geocoding request
 
