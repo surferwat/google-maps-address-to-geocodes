@@ -7,7 +7,7 @@ A wrapper to convert an address to geocodes using Google Maps Geocoding API.
 Step 1: Clone the repo 
 
 ```
-git clone https://github.com/surferwat/react-hoc-dropzone-items-list.git
+git clone https://github.com/surferwat/google-maps-address-to-geocodes.git
 ```
 
 Step 2: Install the dependecies
